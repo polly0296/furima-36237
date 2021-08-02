@@ -27,9 +27,9 @@
 | text               | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | status_id          | integer    | null: false                    |
-| delivery_fee_id    | integer    | null: false                    |
-| delivery_source_id | integer    | null: false                    |
-| delivery_time_id   | integer    | null: false                    |
+| fee_id             | integer    | null: false                    |
+| source_id          | integer    | null: false                    |
+| shipday_id         | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
