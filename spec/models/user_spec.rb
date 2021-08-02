@@ -121,7 +121,7 @@ RSpec.describe User, type: :model do
       it 'last_nameは全角（漢字・ひらがな・カタカナ）でなければ登録できない' do
         @user.last_name = 'test'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Last name is invalid"
+        expect(@user.errors.full_messages).to include 'Last name is invalid'
       end
 
       it 'first_nameが空では登録できない' do
@@ -133,7 +133,7 @@ RSpec.describe User, type: :model do
       it 'first_nameは全角（漢字・ひらがな・カタカナ）でなければ登録できない' do
         @user.first_name = 'test'
         @user.valid?
-        expect(@user.errors.full_messages).to include "First name is invalid"
+        expect(@user.errors.full_messages).to include 'First name is invalid'
       end
 
       it 'last_name_kanaが空では登録できない' do
@@ -145,7 +145,7 @@ RSpec.describe User, type: :model do
       it 'last_name_kanaは全角（カタカナ）でなければ登録できない' do
         @user.last_name_kana = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Last name kana is invalid"
+        expect(@user.errors.full_messages).to include 'Last name kana is invalid'
       end
 
       it 'last_name_kanaが空では登録できない' do
@@ -157,7 +157,7 @@ RSpec.describe User, type: :model do
       it 'first_name_kanaは全角（カタカナ）でなければ登録できない' do
         @user.first_name_kana = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include "First name kana is invalid"
+        expect(@user.errors.full_messages).to include 'First name kana is invalid'
       end
 
       it 'birth_dateが空では登録できない' do

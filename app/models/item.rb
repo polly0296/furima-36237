@@ -15,7 +15,7 @@ class Item < ApplicationRecord
     validates :text
   end
 
-  with_options  numericality: { other_than: 0 , message: "can't be blank"} do
+  with_options numericality: { other_than: 0, message: "can't be blank" } do
     validates :category_id
     validates :status_id
     validates :fee_id
@@ -23,9 +23,8 @@ class Item < ApplicationRecord
     validates :shipday_id
   end
 
-
   VALID_PRICE_REGEX = /\A[0-9]+\z/
-  validates :price, format: {with: VALID_PRICE_REGEX}, numericality: {greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}, allow_blank: true
+  validates :price, format: { with: VALID_PRICE_REGEX },
+                    numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }, allow_blank: true
   validates :price, presence: true
-
 end

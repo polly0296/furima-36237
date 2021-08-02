@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :item do
-    name {Faker::Lorem.sentence}
-    text {Faker::Lorem.sentence}
+    name { Faker::Lorem.sentence }
+    text { Faker::Lorem.sentence }
     category { Category.all.sample }
     status { Status.all.sample }
     fee { Fee.all.sample }
     source { Source.all.sample }
     shipday { Shipday.all.sample }
-    price { Faker::Number.within(range: 300..9999999) }
+    price { Faker::Number.within(range: 300..9_999_999) }
     association :user
 
     after(:build) do |item|
