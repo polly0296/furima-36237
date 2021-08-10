@@ -33,7 +33,7 @@ RSpec.describe OrderDelivery, type: :model do
       it 'source_idを選択していないと保存できないこと' do
         @order_delivery.source_id = 0
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include("Source Select")
+        expect(@order_delivery.errors.full_messages).to include('Source Select')
       end
       it 'cityが空だと保存できないこと' do
         @order_delivery.city = ''
@@ -53,7 +53,7 @@ RSpec.describe OrderDelivery, type: :model do
       it 'phone_numberが10桁以上11桁以内の半角数値でないと保存できないこと' do
         @order_delivery.phone_number = '090-1234-5678'
         @order_delivery.valid?
-        expect(@order_delivery.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_delivery.errors.full_messages).to include('Phone number is invalid')
       end
       it 'tokenが空だと保存できないこと' do
         @order_delivery.token = ''
