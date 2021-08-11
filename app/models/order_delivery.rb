@@ -8,12 +8,11 @@ class OrderDelivery
     validates :source_id
     validates :city
     validates :house_number
-    validates :phone_number
+    validates :phone_number, format: { with: /\A\d{10,11}\z/ }
     validates :token
     validates :item_id
     validates :user_id
   end
-  validates :phone_number, format: { with: /\A\d{10,11}\z/ }
 
   def save
     order = Order.create(item_id: item_id, user_id: user_id)
