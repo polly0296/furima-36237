@@ -28,4 +28,12 @@ class Item < ApplicationRecord
   validates :price, format: { with: VALID_PRICE_REGEX },
                     numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }, allow_blank: true
   validates :price, presence: true
+
+  def self.search(keyword)
+    if keyword != ""
+       Item.where(["name like? OR text like?", "%#{keyword}%", "%#{keyword}%"])
+    else
+       Item.all
+    end
+  end
 end
