@@ -173,6 +173,7 @@
   font-size: 18px;
   border-radius: 100px;
   margin-bottom: 2vh;
+  cursor: pointer;
 }
 
 .comment-flag {
@@ -184,11 +185,22 @@
   margin: 10px 5px 0 0;
 }
 
+.comment-notes {
+  font-size: 17px;
+}
+
+.comment-list {
+  margin-top: 30px;
+}
+
+.comments {
+  text-align: left;
+}
+
 .links {
   display: flex;
   justify-content: space-between;
   width: 50vw;
-
 }
 
 .change-item-btn {
