@@ -17,7 +17,7 @@ class Item < ApplicationRecord
     validates :text
   end
 
-  with_options numericality: { other_than: 0, message: "can't be blank" } do
+  with_options numericality: { other_than: 0, message: "を選択してください" } do
     validates :category_id
     validates :status_id
     validates :fee_id

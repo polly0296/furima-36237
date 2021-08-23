@@ -3,7 +3,7 @@ class OrderDelivery
   attr_accessor :postal_code, :source_id, :city, :house_number, :building_name, :phone_number, :item_id, :user_id, :token, :price
 
   validates :postal_code, presence: true, format: { with: /\A\d{3}-\d{4}\z/ }
-  validates :source_id, numericality: { other_than: 0, message: 'Select' }
+  validates :source_id, numericality: { other_than: 0, message: 'を選択してください' }
   with_options presence: true do
     validates :source_id
     validates :city
